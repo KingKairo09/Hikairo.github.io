@@ -1,0 +1,218 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+  background-color: #070b0b;
+}
+
+nav .logo img {
+  height: 64px; /* Adjust size as needed */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  position: relative;
+  margin-left: 50px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #9cc9d0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #e6303f;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Aligns the dropdown below the parent link */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #070b0b;
+  padding: 5px 0;
+  list-style: none;
+  min-width: fit-content; /* Adjust width to fit content */
+  white-space: nowrap; /* Prevent text from wrapping */
+  text-align: center;
+  z-index: 100; /* Ensures it stays above other elements */
+}
+
+.dropdown-menu li {
+  margin: 10px;
+}
+
+.dropdown-menu li a {
+  padding: 8px 15px;
+  font-size: 1.5rem; /* Smaller font size to fit better */
+  color: #9cc9d0;
+  text-transform: none;
+  display: inline;
+}
+
+.dropdown:hover > a,
+.dropdown:focus-within > a {
+  color: #e6303f; /* Highlight parent link when dropdown is active */
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+/* Fix spacing between dropdown and parent link */
+.dropdown a {
+  display: flex; /* Enables alignment of text and icon */
+  align-items: center; /* Vertically centers items */
+}
+
+.dropdown span i {
+  margin-left: 5px; /* Space between text and icon */
+  font-size: 0.9em;
+  transition: transform 0.2s ease-in-out; /* Smoother transition */
+}
+
+.dropdown:hover span i {
+  transform: rotate(180deg); /* Flip effect */
+}
+
+.Logo {
+  display: flex;
+  align-items: center; /* Vertically center logo and text */
+  justify-content: space-between; /* Space out logo and website name */
+  padding: 0px;
+}
+
+.Logo .logo img {
+  height: 4rem; /* Adjust to desired logo size */
+  width: auto;
+}
+
+.Logo .logo-mobile img {
+  display: none;
+}
+.Logo .website-name h1 {
+  font-family: Encode Sans Thin, sans-serif;
+  font-size: 2rem; /* Adjust text size */
+  text-transform: uppercase;
+  margin: 40px; /* Removes default margin */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #9cc9d0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  transition: color 0.3s;
+  cursor: default; /* Prevent pointer from changing to a hand */
+}
+
+.nav-link:hover {
+  color: #e6303f; /* Change hover color to match your style */
+}
+
+#burger,
+#nav-mobile,
+#burger-check {
+  display: none;
+}
+
+#nav-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #070b0b;
+  z-index: 1001;
+  padding: 10vh 40px;
+  flex-direction: column;
+  align-items: end;
+  gap: 1.25rem;
+  font-size: 2rem;
+  overflow: scroll;
+
+  a {
+    color: #ebf1f2;
+    text-decoration: none;
+  }
+}
+#burger {
+  cursor: pointer;
+}
+
+@media (max-width: 1080px) {
+  #desktop-nav {
+    display: none;
+  }
+  #burger {
+    display: block;
+    z-index: 1002;
+    font-size: 2rem;
+    color: #ebf1f2;
+  }
+  #burger-check:checked ~ #nav-mobile {
+    display: flex;
+  }
+
+  .Logo .website-name {
+    display: none;
+  }
+  .Logo .logo img {
+    display: none;
+  }
+  .Logo .logo-mobile img {
+    display: flex;
+    max-width: 30vw;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  #desktop-nav {
+    display: none;
+  }
+  #burger {
+    display: block;
+    z-index: 1002;
+    font-size: 2rem;
+    color: #ebf1f2;
+  }
+  #burger-check:checked ~ #nav-mobile {
+    display: flex;
+  }
+
+  .Logo .website-name {
+    display: none;
+  }
+  .Logo .logo img {
+    display: none;
+  }
+  .Logo .logo-mobile img {
+    display: flex;
+    max-width: 30vw;
+    height: auto;
+    max-height: 64px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+@media (orientation: landscape) {
+  #nav-mobile {
+    padding: 25vh 40px;
+  }
+}
