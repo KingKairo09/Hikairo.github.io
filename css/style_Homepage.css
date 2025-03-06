@@ -47,18 +47,7 @@ main {
   }
 }
 
-/* Landscape mode */
 @media (orientation: landscape) {
-  main video.showreel {
-    display: flex;
-  }
-  main video.showreel-mobile {
-    display: none;
-  }
-}
-
-/* Ensure desktop view shows the main video on large screens */
-@media (min-width: 1081px) {
   main video.showreel {
     display: flex;
   }
