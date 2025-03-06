@@ -1,4 +1,3 @@
-/* Default for larger screens */
 nav {
   display: flex;
   justify-content: space-between;
@@ -44,10 +43,10 @@ nav ul li a:hover {
   background-color: #070b0b;
   padding: 5px 0;
   list-style: none;
-  min-width: fit-content;
-  white-space: nowrap;
+  min-width: fit-content; /* Adjust width to fit content */
+  white-space: nowrap; /* Prevent text from wrapping */
   text-align: center;
-  z-index: 100;
+  z-index: 100; /* Ensures it stays above other elements */
 }
 
 .dropdown-menu li {
@@ -56,7 +55,7 @@ nav ul li a:hover {
 
 .dropdown-menu li a {
   padding: 8px 15px;
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Smaller font size to fit better */
   color: #9cc9d0;
   text-transform: none;
   display: inline;
@@ -64,7 +63,7 @@ nav ul li a:hover {
 
 .dropdown:hover > a,
 .dropdown:focus-within > a {
-  color: #e6303f;
+  color: #e6303f; /* Highlight parent link when dropdown is active */
 }
 
 .dropdown:hover .dropdown-menu,
@@ -74,41 +73,40 @@ nav ul li a:hover {
 
 /* Fix spacing between dropdown and parent link */
 .dropdown a {
-  display: flex;
-  align-items: center;
+  display: flex; /* Enables alignment of text and icon */
+  align-items: center; /* Vertically centers items */
 }
 
 .dropdown span i {
-  margin-left: 5px;
+  margin-left: 5px; /* Space between text and icon */
   font-size: 0.9em;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out; /* Smoother transition */
 }
 
 .dropdown:hover span i {
-  transform: rotate(180deg);
+  transform: rotate(180deg); /* Flip effect */
 }
 
 .Logo {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: center; /* Vertically center logo and text */
+  justify-content: space-between; /* Space out logo and website name */
   padding: 0px;
 }
 
 .Logo .logo img {
-  height: 4rem;
+  height: 4rem; /* Adjust to desired logo size */
   width: auto;
 }
 
 .Logo .logo-mobile img {
   display: none;
 }
-
 .Logo .website-name h1 {
   font-family: Encode Sans Thin, sans-serif;
-  font-size: 2rem;
+  font-size: 2rem; /* Adjust text size */
   text-transform: uppercase;
-  margin: 40px;
+  margin: 40px; /* Removes default margin */
 }
 
 .nav-link {
@@ -117,30 +115,17 @@ nav ul li a:hover {
   font-size: 1.5rem;
   text-transform: uppercase;
   transition: color 0.3s;
-  cursor: default;
+  cursor: default; /* Prevent pointer from changing to a hand */
 }
 
 .nav-link:hover {
-  color: #e6303f;
+  color: #e6303f; /* Change hover color to match your style */
 }
 
-/* Desktop Nav */
-#desktop-nav {
-  display: flex !important; /* Ensure it’s visible on large screens */
-}
-
-#nav-mobile {
-  display: none; /* Hide mobile nav by default */
-}
-
-/* Burger Button and Mobile Navigation */
 #burger,
+#nav-mobile,
 #burger-check {
   display: none;
-}
-
-#burger {
-  cursor: pointer;
 }
 
 #nav-mobile {
@@ -157,32 +142,38 @@ nav ul li a:hover {
   gap: 1.25rem;
   font-size: 2rem;
   overflow: scroll;
-}
 
-#nav-mobile a {
-  color: #ebf1f2;
-  text-decoration: none;
-}
-
-/* Mobile Navigation - Hide Desktop, Show Burger */
-@media (max-width: 767px) {
-  #desktop-nav {
-    display: none; /* Hide desktop nav on small screens */
+  a {
+    color: #ebf1f2;
+    text-decoration: none;
   }
-  #nav-mobile {
-    display: flex; /* Show mobile nav on small screens */
+}
+#burger {
+  cursor: pointer;
+}
+
+@media (max-width: 1080px) {
+  #desktop-nav {
+    display: none;
   }
   #burger {
-    display: block; /* Show hamburger menu on small screens */
+    display: block;
+    z-index: 1002;
+    font-size: 2rem;
+    color: #ebf1f2;
   }
+  #burger-check:checked ~ #nav-mobile {
+    display: flex;
+  }
+
   .Logo .website-name {
-    display: none; /* Hide website name on small screens */
+    display: none;
   }
   .Logo .logo img {
-    display: none; /* Hide logo on small screens */
+    display: none;
   }
   .Logo .logo-mobile img {
-    display: flex; /* Show mobile logo */
+    display: flex;
     max-width: 30vw;
     height: auto;
     padding-top: 10px;
@@ -190,31 +181,38 @@ nav ul li a:hover {
   }
 }
 
-/* Touch Devices */
 @media (hover: none) and (pointer: coarse) {
   #desktop-nav {
-    display: none; /* Hide desktop nav on touch devices */
+    display: none;
   }
   #burger {
-    display: block; /* Show burger on touch devices */
+    display: block;
+    z-index: 1002;
+    font-size: 2rem;
+    color: #ebf1f2;
   }
-  #nav-mobile {
-    display: flex; /* Show mobile nav */
+  #burger-check:checked ~ #nav-mobile {
+    display: flex;
   }
+
   .Logo .website-name {
-    display: none; /* Hide website name on touch devices */
+    display: none;
   }
   .Logo .logo img {
-    display: none; /* Hide logo on touch devices */
+    display: none;
   }
   .Logo .logo-mobile img {
-    display: flex; /* Show mobile logo */
+    display: flex;
+    max-width: 30vw;
+    height: auto;
+    max-height: 64px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
-/* Landscape Orientation */
 @media (orientation: landscape) {
   #nav-mobile {
-    padding: 25vh 40px; /* Adjust padding for landscape view */
+    padding: 25vh 40px;
   }
 }

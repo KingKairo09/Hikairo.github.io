@@ -30,24 +30,24 @@ main {
   flex: 1; /* Makes the content area flexible to push footer down */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   main video.showreel {
     display: none;
   }
   main video.showreel-mobile {
     display: flex;
-    width: 100%; /* Ensure full width */
-    height: auto;
+    max-height: 100vh;
   }
   main {
     display: flex;
+    max-height: 100vh;
+    align-self: center;
     align-items: center;
-    justify-content: center;
     overflow: hidden;
   }
 }
 
-@media (min-width: 769px) {
+@media (orientation: landscape) {
   main video.showreel {
     display: flex;
   }
