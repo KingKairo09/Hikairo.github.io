@@ -1,6 +1,5 @@
 footer {
-  position: absolutes;
-  bottom: 0;
+  width: 100%;
   background-color: #070b0b;
 }
 
@@ -8,7 +7,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  padding: 20px 0;
 }
 
 footer .social-links {
@@ -25,14 +24,13 @@ footer .social-links a {
 }
 
 footer .social-links a:hover {
-  transform: scale(1.1); /* Slight zoom effect */
-  color: #e6303f; /* Highlight on hover, customize to your palette */
+  transform: scale(1.1);
+  color: #e6303f;
 }
 
 .footer-link {
-  position: absolute;
-  right: 25px; /* Adjust to fine-tune spacing from the edge */
-  bottom: 0;
+  position: relative;
+  right: 25px;
   padding-bottom: 25px;
   color: #005f6b;
   text-decoration: none;
@@ -41,7 +39,7 @@ footer .social-links a:hover {
 }
 
 .footer-link:hover {
-  color: #e6303f; /* Change hover color to match your theme */
+  color: #e6303f;
 }
 
 @media (hover: none) and (pointer: coarse) {
@@ -54,12 +52,5 @@ footer .social-links a:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #070b0b;
-  }
-  footer .social-links {
-    padding-top: 20px;
-    flex-direction: row;
   }
 }
-
-/* Testing Git change */
