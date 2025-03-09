@@ -11,53 +11,47 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%; /* Ensures the body uses full height */
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
 main {
-  flex: 1; /* Makes the content area flexible to push footer down */
+  flex: 1;
 }
 
-/* Portfolio Grid Styling */
 .portfolio {
   margin: 50px auto;
   padding: 0 20px;
-  max-width: 1200px; /* Adjust to your preferred width */
+  max-width: 1200px;
 }
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(
-    4,
-    1fr
-  ); /* This creates 4 equal-width columns */
-  gap: 20px; /* Space between grid items */
-  width: 100%; /* Ensure the grid takes up full width */
-  grid-auto-rows: minmax(200px, auto); /* Allow rows to grow based on content */
-  margin: 0 auto; /* Center grid horizontally */
-  grid-template-rows: auto; /* Let the rows adapt based on content */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  grid-auto-rows: minmax(200px, auto);
+  margin: 0 auto;
+  grid-template-rows: auto;
 }
 
 .portfolio-item {
   position: relative;
   overflow: hidden;
-  border-radius: 8px; /* Optional: rounded corners */
-  aspect-ratio: 1 / 1; /* Ensures the item stays square */
-
-  position: relative;
+  border-radius: 8px;
+  aspect-ratio: 1 / 1;
 }
 
 .portfolio-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Crop image to fit */
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
 
 .portfolio-item:hover img {
-  transform: scale(1.03); /* Slight zoom effect on hover */
+  transform: scale(1.03);
 }
 
 .portfolio-item .overlay {
@@ -66,7 +60,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 95, 107, 0.5); /* Semi-transparent overlay */
+  background-color: rgba(0, 95, 107, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,7 +69,7 @@ main {
 }
 
 .portfolio-item:hover .overlay {
-  opacity: 1; /* Show overlay on hover */
+  opacity: 1;
 }
 
 .portfolio-item .overlay h2 {
@@ -85,15 +79,14 @@ main {
   margin: 0;
 }
 
-/* Responsive Design: Adjust for smaller screens */
 @media (max-width: 768px) {
   .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   .portfolio-grid {
-    grid-template-columns: 1fr; /* 1 column for very small screens */
+    grid-template-columns: 1fr;
   }
 }

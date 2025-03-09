@@ -5,21 +5,20 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
-  justify-content: space-between;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%; /* Ensures the body uses full height */
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
 main {
-  flex: 1; /* Makes the content area flexible to push footer down */
-  flex-basis: content;
+  flex: 1;
+  flex-basis: auto;
   max-width: 30vw;
   align-self: center;
   padding-bottom: 100px;

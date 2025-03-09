@@ -9,7 +9,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%; /* Ensures the body uses full height */
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -19,7 +19,7 @@ body {
 }
 
 main {
-  flex: 1; /* Makes the content area flexible to push footer down */
+  flex: 1;
   display: flex;
   flex-direction: column;
   width: fit-content;

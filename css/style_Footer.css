@@ -1,5 +1,5 @@
 footer {
-  position: absolutes;
+  position: absolute;
   bottom: 0;
   background-color: #070b0b;
 }
@@ -25,13 +25,13 @@ footer .social-links a {
 }
 
 footer .social-links a:hover {
-  transform: scale(1.1); /* Slight zoom effect */
-  color: #e6303f; /* Highlight on hover, customize to your palette */
+  transform: scale(1.1);
+  color: #e6303f;
 }
 
 .footer-link {
   position: absolute;
-  right: 25px; /* Adjust to fine-tune spacing from the edge */
+  right: 25px;
   bottom: 0;
   padding-bottom: 25px;
   color: #005f6b;
@@ -41,7 +41,7 @@ footer .social-links a:hover {
 }
 
 .footer-link:hover {
-  color: #e6303f; /* Change hover color to match your theme */
+  color: #e6303f;
 }
 
 @media (hover: none) and (pointer: coarse) {

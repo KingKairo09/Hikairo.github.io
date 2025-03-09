@@ -5,20 +5,19 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
-  justify-content: space-between;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%; /* Ensures the body uses full height */
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
 main {
-  flex: 1; /* Makes the content area flexible to push footer down */
+  flex: 1;
   display: flex;
   width: fit-content;
   max-width: 50vw;
@@ -33,18 +32,16 @@ p {
   line-height: 2rem;
 }
 
-/* About text */
 .about-text {
-  line-height: 1.7; /* Line height for readability */
+  line-height: 1.7;
   align-self: center;
 }
 
-/* Image styling */
 .about-image img {
   width: 100%;
   height: auto;
-  object-fit: cover; /* Ensures the image doesn't get stretched */
-  max-height: 100%; /* Ensures the image does not exceed the height of the text */
+  object-fit: cover;
+  max-height: 100%;
 }
 
 @media (max-width: 1080px) {

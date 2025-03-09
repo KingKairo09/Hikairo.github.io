@@ -6,9 +6,11 @@ body {
   margin: 0;
   padding: 0;
 }
+
 /* * {
-  border: 1px solid red;
+  border: 1px solid red; 
 } */
+
 html,
 body {
   margin: 0;
@@ -55,7 +57,7 @@ video {
 .social-links {
   display: flex;
   gap: 20px; /* Space between buttons */
-  justify-content: center; /* Align buttons to the left */
+  justify-content: center; /* Center buttons horizontally */
 }
 
 .social-button {
@@ -99,7 +101,7 @@ video {
   right: 40px; /* Position on the right side */
 }
 
-.nav-arrow:hover {
+.nav-arrow a:hover {
   color: #005f6b; /* Change hover color for effect */
 }
 
@@ -118,20 +120,24 @@ video {
     align-self: center;
     max-width: 40vw;
   }
+
   video {
     max-width: none;
     max-height: none;
     width: 100vw;
     height: auto;
   }
+
   .project-info {
     width: 80vw;
     display: flex;
     flex-direction: column;
   }
+
   .nav-arrow {
     display: none;
   }
+
   .nav-arrow-m {
     display: flex;
     width: 80vw;
